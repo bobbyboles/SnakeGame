@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  background: -webkit-linear-gradient(top, rgb(203, 14, 217), #0be842);
+  text-align: center;
+  flex-direction: column;
+}
+
+.score {
+  font-family: verdana;
+  font-size: 2em;
+  position: relative;
+  color: #fff;
+}
+
+canvas {
+  height: 800px;
+  width: 800px;
+  background-color: lightgray;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.displaySpace {
+    height: 50px;
+    background-color: lightblue;
+}
