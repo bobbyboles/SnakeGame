@@ -34,7 +34,6 @@ let isCookie = false;
 
 let iterateSpeed = 100;
 let interval;
-let cookieFlag = false
 let currentDirection = "up";
 //the height and width of each box
 let snakeSize = 10;
@@ -88,7 +87,7 @@ function clearSnake() {
 // Draw snake
 function drawSnake() {
     ctx.beginPath();
-    ctx.fillRect(snakeStartX, snakeStartY, snakeSize, snakeSize, snakeColor);
+    ctx.fillRect(snakeStartX, snakeStartY, snakeSize, snakeSize);
     ctx.closePath();
 }
 
@@ -140,7 +139,7 @@ function cookieGenerator() {
   if (!isCookie) {
     cookieX = (Math.floor(Math.random() * (400/snakeSize)) * snakeSize);
     cookieY = (Math.floor(Math.random() * (400/snakeSize)) * snakeSize);
-    for (i=0;i<snakeLength-1;i++) {
+    for (let i=0;i<snakeLength-1;i++) {
       if (cookieX === snakeX[i] && cookieY === snakeY[i]) {
         console.log("cookie tried to spawn in snake");
         cookieGenerator();
